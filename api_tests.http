@@ -1,0 +1,50 @@
+DELETE http://localhost:8080/advertisement/1
+Content-Type: application/json
+Token: 5bd4d391-f978-4e5b-bd98-7490d4a14f3d
+
+###
+
+PATCH http://localhost:8080/advertisement/2
+Content-Type: application/json
+Token: 5bd4d391-f978-4e5b-bd98-7490d4a14f3d
+
+{
+  "title": "Adv #1 Updated"
+}
+
+###
+POST http://localhost:8080/advertisement
+Content-Type: application/json
+Token: 5bd4d391-f978-4e5b-bd98-7490d4a14f3d
+
+{
+  "title": "Adv #1",
+  "description": "some random description"
+}
+
+###
+GET http://localhost:8080/advertisement/1
+Accept: application/json
+
+###
+POST http://localhost:8080/token/create/
+Content-Type: application/json
+
+{
+  "email": "test@user.com",
+  "password": "1cTWtwDKdk555"
+}
+
+### TOKEN - 5bd4d391-f978-4e5b-bd98-7490d4a14f3d
+
+POST http://localhost:8080/create_user/
+Content-Type: application/json
+
+{
+  "email": "test@user.com",
+  "password": "1cTWtwDKdk555"
+}
+
+###
+
+
